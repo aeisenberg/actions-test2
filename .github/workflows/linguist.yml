@@ -14,6 +14,13 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       # - uses: actions/setup-ruby@v1
-      - run: |
-          gem install github-linguist
-          github-linguist
+
+      - name: Install gem
+        run: |
+          mkdir gems
+          mkdir gems/bin
+          mkdir gems/packs
+          gem install -i gems/packs -n gems/bin github-linguist
+
+      - name: Run linguist
+        run: gems/bin/github-linguist --json
