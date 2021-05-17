@@ -9,10 +9,10 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        os: [ubuntu-latest, ubuntu-20.04]
+        os: [ubuntu-20.04]
 
     steps:
-      - name: Python
+      - name: Update
         run: |
           export DEBIAN_FRONTEND=noninteractive
           sudo apt-get update
@@ -28,4 +28,6 @@ jobs:
               pandoc \
               python3-sphinx
 
+      - name: Python
+        run: |
           python --version
