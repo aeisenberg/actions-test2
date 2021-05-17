@@ -9,7 +9,7 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-2016]
+        os: [ubuntu-latest, windows-2016, ubuntu-20.04]
 
     steps:
       - name: Python
