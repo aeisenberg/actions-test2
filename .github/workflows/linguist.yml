@@ -9,8 +9,23 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-2016, ubuntu-20.04]
+        os: [ubuntu-latest, ubuntu-20.04]
 
     steps:
       - name: Python
-        run: python --version
+        run: |
+          export DEBIAN_FRONTEND=noninteractive
+          sudo apt-get update
+          sudo apt-get install -y \
+              build-essential \
+              clang \
+              gcc-mingw-w64-i686 \
+              g++-mingw-w64-i686 \
+              g++-multilib \
+              libblocksruntime-dev \
+              libc6-dev-i386 \
+              opensp \
+              pandoc \
+              python3-sphinx
+
+          python --version
