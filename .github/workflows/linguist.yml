@@ -6,23 +6,11 @@ on:
 
 jobs:
   linguist:
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.os}}
     strategy:
       matrix:
         os: [ubuntu-lastest, windows-2016]
 
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-ruby@v1
-        with:
-          ruby-version: 2.7
-
-      - name: Install gem
-        run: |
-          mkdir gems
-          mkdir gems/bin
-          mkdir gems/packs
-          gem install -i gems/packs -n gems/bin github-linguist
-
-      - name: Run linguist
-        run: gems/bin/github-linguist --json
+      - name: Python
+        run: python --version
