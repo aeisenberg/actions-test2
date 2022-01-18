@@ -9,12 +9,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          path: x/y/z/my-dir
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v1
+        uses: github/codeql-action/init@aeisenberg/checkout-path-commitoid
         with:
-            languages: javascript
-            config-file: ./.github/codeql/codeql-config.yml
+          source-root: x/y/z/my-dir
 
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v1
+      - name: Analyze
+        uses: github/codeql-action/analyze@aeisenberg/checkout-path-commitoid
+        with:
+          checkout_path: x/y/z/my-dir
