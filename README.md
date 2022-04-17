@@ -2,4 +2,4 @@
 
 This is a repo where I test out some ideas.
 
-[![CodeQL](https://github.com/aeisenberg/actions-test2/actions/workflows/codeql.yml/badge.svg?branch=main&event=push)](https://github.com/aeisenberg/actions-test2/blob/master/.github/workflows/codeql.yml)
+[![CodeQL](https://github.com/aeisenberg/actions-test2/actions/workflows/codeql.yml/badge.svg?branch=master&event=push)](https://github.com/aeisenberg/actions-test2/blob/master/.github/workflows/codeql.yml)
