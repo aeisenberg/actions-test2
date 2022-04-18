@@ -7,3 +7,10 @@ Branch parameter and event:
 
 No branch, no event:
 ![CodeQL](https://github.com/aeisenberg/actions-test2/actions/workflows/codeql.yml/badge.svg)
+
+Branch parameter and event:
+![CodeQL2](https://github.com/aeisenberg/actions-test2/actions/workflows/codeql2.yml/badge.svg?branch=master&event=push)
+
+No branch, no event:
+![CodeQL2](https://github.com/aeisenberg/actions-test2/actions/workflows/codeql2.yml/badge.svg)
+
